@@ -1,0 +1,39 @@
+nav {
+  @apply sticky left-0 top-0 flex w-full border-b bg-white py-2;
+}
+
+ul {
+  @apply flex items-center gap-4;
+
+  li {
+    @apply text-sm font-medium text-gray-500 transition-colors duration-300 ease-linear hover:text-gray-900;
+  }
+}
+
+ul.modal-nav {
+  @apply flex w-full flex-col items-start gap-2;
+
+  li {
+    @apply hover:text-primary text-base font-medium text-gray-500 transition-colors duration-300 ease-linear;
+  }
+}
+
+a.contact {
+  @apply bg-primary rounded border border-black/20 px-3 py-1.5 text-sm text-white transition-colors duration-300 ease-linear;
+
+  &:hover {
+    @apply bg-primary-dark;
+  }
+
+  &:active {
+    @apply bg-primary-darker;
+  }
+}
+
+button.hamburger {
+  @apply cursor-pointer rounded p-1.5 text-gray-500 transition-colors duration-300 ease-linear;
+
+  &:hover {
+    @apply bg-gray-200 text-gray-900;
+  }
+}

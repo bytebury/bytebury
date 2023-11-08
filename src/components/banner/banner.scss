@@ -1,0 +1,23 @@
+.banner {
+  @apply rounded border border-dashed p-2.5;
+}
+
+.warning {
+  @apply border-orange-200 bg-orange-100;
+}
+
+.danger {
+  @apply border-red-200 bg-red-100;
+}
+
+.success {
+  @apply border-green-200 bg-green-100;
+}
+
+.info {
+  @apply border-blue-200 bg-blue-100;
+}
+
+.default {
+  @apply border-purple-200 bg-purple-100;
+}
