@@ -1,0 +1,56 @@
+$borderWidth: 3px;
+
+header {
+  @apply -mt-4 flex flex-col gap-10 bg-gray-100 py-14;
+}
+
+.cta {
+  @apply inline-block font-bold hover:underline;
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: $borderWidth;
+  z-index: 0;
+
+  div {
+    border-radius: $borderWidth;
+    @apply px-5 py-3;
+  }
+}
+
+.gradient-border:after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * $borderWidth);
+  left: calc(-1 * $borderWidth);
+  height: calc(100% + $borderWidth * 2);
+  width: calc(100% + $borderWidth * 2);
+  background: linear-gradient(60deg, #6bceff, #c398fc, #0069dc);
+  border-radius: calc(2 * $borderWidth);
+  z-index: -1;
+  animation: animated-gradient 2s linear alternate infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes animated-gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  25% {
+    background-position: 25% 0%;
+  }
+
+  50% {
+    background-position: 50% 0%;
+  }
+
+  75% {
+    background-position: 75% 0%;
+  }
+
+  100% {
+    background-position: 100% 0%;
+  }
+}

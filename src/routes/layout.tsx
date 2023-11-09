@@ -2,7 +2,7 @@ import { component$, Slot, useStyles$ } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
 import styles from "./styles.css?inline";
-import Navbar from "~/components/core/navbar";
+import Navbar from "~/components/navbar/navbar";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   cacheControl({

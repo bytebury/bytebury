@@ -1,4 +1,9 @@
-import { Slot, component$, useStylesScoped$ } from "@builder.io/qwik";
+import {
+  Slot,
+  component$,
+  useResource$,
+  useStylesScoped$,
+} from "@builder.io/qwik";
 import type { Signal } from "@builder.io/qwik";
 import styles from "./modal.scss?inline";
 import { IcBaselineClose } from "~/media/icons/close";
@@ -10,6 +15,16 @@ export interface ModalProps {
 
 export default component$((props: ModalProps) => {
   useStylesScoped$(styles);
+
+  useResource$(({ track }) => {
+    track(() => props.isOpen.value);
+
+    if (props.isOpen.value) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  });
 
   return (
     <div
@@ -33,7 +48,7 @@ export default component$((props: ModalProps) => {
                 >
                   <IcBaselineClose class="h-5 w-5" />
                 </button>
-                <div class="text-left">
+                <div class="w-full text-left">
                   <h3>
                     <Slot name="title" />
                   </h3>

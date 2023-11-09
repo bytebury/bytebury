@@ -1,7 +1,7 @@
 import { component$, useSignal, useStylesScoped$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import { APP_NAME } from "~/constants/app-constants";
-import ImgLogoWhite from "~/media/images/logo-white.svg?jsx";
+import ImgLogoColored from "~/media/images/logo-colored.svg?jsx";
 import styles from "./navbar.scss?inline";
 import { IcOutlineMenu } from "~/media/icons/outline-menu";
 import Modal from "../modal/modal";
@@ -16,15 +16,15 @@ export default component$(() => {
       <div class="container flex items-center justify-between">
         {/* Left side navigation */}
         <div id="Navbar_Brand_Logo" class="flex items-stretch gap-1">
-          <Link href="/" class="bg-primary rounded-full p-1">
-            <ImgLogoWhite
+          <Link href="/">
+            <ImgLogoColored
               style={{ width: "28px", height: "28px" }}
               aria-label={`${APP_NAME} logo`}
             />
           </Link>
           <Link
             href="/"
-            class="hidden items-center rounded px-3 text-xl font-extrabold transition-colors duration-300 ease-linear hover:bg-gray-200 hover:text-gray-900 md:flex"
+            class="flex items-center rounded px-2 text-xl font-extrabold transition-colors duration-300 ease-linear hover:bg-gray-200 hover:text-gray-900"
           >
             {APP_NAME}
           </Link>

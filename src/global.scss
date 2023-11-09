@@ -1,0 +1,32 @@
+/**
+ * Tailwind CSS imports
+ * View the full documentation at https://tailwindcss.com
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    @apply font-extrabold;
+  }
+}
+
+html,
+body {
+  @apply flex h-full flex-col;
+}
+
+html {
+  @apply font-sans leading-5 text-gray-800;
+}
+
+body {
+  @apply m-0 gap-4 p-0;
+}
+
+footer {
+  @apply mt-auto;
+}
