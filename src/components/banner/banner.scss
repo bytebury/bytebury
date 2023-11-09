@@ -1,6 +1,6 @@
 .banner {
-  @apply inline-flex w-auto items-center justify-center
-         gap-2 rounded-xl border border-dashed p-2.5;
+  @apply flex w-full items-center gap-2;
+  @apply rounded-xl border border-dashed p-2;
 }
 
 .pill {

@@ -7,7 +7,10 @@ export default component$(() => {
 
   return (
     <header>
-      <div class="container -mt-10">
+      <div class="container -mt-10 flex w-auto flex-col gap-4">
+        <Banner type="danger" exclamation="❌">
+          At this time we are not taking clients
+        </Banner>
         <Banner type="warning" exclamation="🏠">
           Our website is currently under construction
         </Banner>

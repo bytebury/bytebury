@@ -10,7 +10,7 @@ export default component$((props: BannerProps) => {
   useStylesScoped$(styles);
 
   return (
-    <div class="flex w-full justify-center">
+    <div class="flex w-full">
       <div class={`banner ${props.type ?? "default"}`}>
         <div class="pill">{props.exclamation || "Note"}</div>
         <Slot />
