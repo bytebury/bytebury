@@ -12,7 +12,7 @@ export default component$(() => {
   const isMobileNavOpen = useSignal(false);
 
   return (
-    <nav>
+    <nav class="z-10">
       <div class="container flex items-center justify-between">
         {/* Left side navigation */}
         <div id="Navbar_Brand_Logo" class="flex items-stretch gap-1">

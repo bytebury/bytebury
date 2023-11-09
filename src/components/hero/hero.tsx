@@ -13,7 +13,9 @@ export default component$(() => {
         </Banner>
       </div>
       <div class="container text-center">
-        <h1 class="text-2xl sm:text-3xl">Crafting Digital Dreams</h1>
+        <h1 class="text-[1.75rem] leading-[2.5rem] sm:text-4xl sm:leading-[3rem]">
+          Crafting Digital Dreams
+        </h1>
         to make your life a little better.
       </div>
       <div class="container text-center">
