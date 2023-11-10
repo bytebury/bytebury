@@ -11,10 +11,15 @@ ul {
 }
 
 ul.modal-nav {
-  @apply flex w-full flex-col items-start gap-2;
+  @apply flex w-full flex-col items-start gap-0;
+
+  li:first-child {
+    @apply border-t;
+  }
 
   li {
-    @apply hover:text-primary text-base font-medium text-gray-500 transition-colors duration-300 ease-linear;
+    @apply hover:text-primary text-base font-medium text-gray-500;
+    @apply w-full border-b transition-colors duration-300 ease-linear;
   }
 }
 

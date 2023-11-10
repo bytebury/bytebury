@@ -33,6 +33,9 @@ export default component$(() => {
         <div id="Navbar_Links" class="hidden gap-2 md:flex">
           <ul>
             <li>
+              <a href="https://github.com/bytebury">Open Source</a>
+            </li>
+            <li>
               <Link href="/">Services</Link>
             </li>
             <li>
@@ -60,10 +63,19 @@ export default component$(() => {
         <div class="flex flex-col gap-3">
           <ul class="modal-nav">
             <li>
-              <Link href="/">Services</Link>
+              <a class="block py-2.5" href="https://github.com/bytebury">
+                Open Source ✨
+              </a>
             </li>
             <li>
-              <Link href="/">Portfolio</Link>
+              <Link class="block py-2.5" href="/">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link class="block py-2.5" href="/">
+                Portfolio
+              </Link>
             </li>
           </ul>
           <a

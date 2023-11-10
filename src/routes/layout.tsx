@@ -3,6 +3,7 @@ import { routeLoader$ } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
 import styles from "./styles.css?inline";
 import Navbar from "~/components/navbar/navbar";
+import Footer from "~/components/footer/footer";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   cacheControl({
@@ -25,11 +26,7 @@ export default component$(() => {
       <main>
         <Slot />
       </main>
-      <footer>
-        <div class="container py-2 text-center text-sm">
-          &copy; bytebury 2023
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 });
