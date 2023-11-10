@@ -23,7 +23,7 @@ export default component$(() => {
       </div>
       <div class="container text-center">
         <a class="cta gradient-border" href="#">
-          <div class="bg-gray-100">Checkout our Solutions</div>
+          <div class="bg-gray-100">Check out our Solutions</div>
         </a>
       </div>
     </header>
