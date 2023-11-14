@@ -10,7 +10,7 @@ export default component$(() => {
 
   return (
     <header>
-      <div class="container flex w-auto flex-col gap-4">
+      <div class="container w-auto">
         <Banner type="default" exclamation="🧠">
           {stoicQuoteSignal.value.text}
         </Banner>

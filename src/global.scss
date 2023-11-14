@@ -20,7 +20,7 @@ body {
 }
 
 html {
-  @apply font-sans leading-5 text-gray-800;
+  @apply font-sans leading-6 text-gray-800;
 }
 
 body {
@@ -30,4 +30,19 @@ body {
 
 footer {
   @apply mt-auto;
+}
+
+main {
+  a:link,
+  a:visited {
+    @apply text-primary underline;
+  }
+
+  a:active {
+    @apply text-primary-darker;
+  }
+
+  a:hover {
+    @apply text-primary-dark;
+  }
 }
