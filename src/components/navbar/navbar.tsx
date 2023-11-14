@@ -5,6 +5,7 @@ import ImgLogoColored from "~/media/images/logo-colored.svg?jsx";
 import styles from "./navbar.scss?inline";
 import { IcOutlineMenu } from "~/media/icons/outline-menu";
 import Modal from "../modal/modal";
+import { IcBaselineArrowOutward } from "~/media/icons/arrow-outward";
 
 export default component$(() => {
   useStylesScoped$(styles);
@@ -33,7 +34,13 @@ export default component$(() => {
         <div id="Navbar_Links" class="hidden gap-2 md:flex">
           <ul>
             <li>
-              <a href="https://github.com/bytebury">Open Source</a>
+              <a
+                class="flex items-center gap-1"
+                href="https://github.com/bytebury"
+              >
+                Open Source
+                <IcBaselineArrowOutward />
+              </a>
             </li>
             <li>
               <Link href="/">Services</Link>

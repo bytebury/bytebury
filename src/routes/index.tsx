@@ -1,10 +1,15 @@
 import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { routeLoader$, type DocumentHead } from "@builder.io/qwik-city";
 import Hero from "~/components/hero/hero";
+
+export const useStoicQuote = routeLoader$(async () => {
+  const response = await fetch("https://stoic-quotes.com/api/quote");
+  return response.json();
+});
 
 export default component$(() => {
   return (
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-8">
       <Hero />
       <div class="container flex flex-col gap-4">
         <section class="flex flex-col gap-4">

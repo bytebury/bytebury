@@ -1,6 +1,6 @@
 .banner {
   @apply flex w-full items-center gap-2;
-  @apply rounded-xl border border-dashed p-2;
+  @apply rounded-xl border border-dashed px-3 py-2;
 }
 
 .pill {

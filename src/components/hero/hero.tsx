@@ -1,18 +1,18 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./hero.scss?inline";
 import Banner from "../banner/banner";
+import { useStoicQuote } from "~/routes";
 
 export default component$(() => {
   useStylesScoped$(styles);
 
+  const stoicQuoteSignal = useStoicQuote();
+
   return (
     <header>
-      <div class="container -mt-10 flex w-auto flex-col gap-4">
-        <Banner type="danger" exclamation="❌">
-          At this time we are not taking clients
-        </Banner>
-        <Banner type="warning" exclamation="🏠">
-          Our website is currently under construction
+      <div class="container flex w-auto flex-col gap-4">
+        <Banner type="default" exclamation="🧠">
+          {stoicQuoteSignal.value.text}
         </Banner>
       </div>
       <div class="container text-center">
