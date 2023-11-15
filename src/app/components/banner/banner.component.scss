@@ -1,0 +1,48 @@
+.banner {
+  @apply flex w-full items-center gap-2;
+  @apply rounded-xl border border-dashed px-3 py-2;
+}
+
+.pill {
+  @apply rounded-xl px-2 py-1 font-semibold;
+}
+
+.warning {
+  @apply border-orange-200 bg-orange-100;
+
+  .pill {
+    @apply bg-orange-200;
+  }
+}
+
+.danger {
+  @apply border-red-200 bg-red-100;
+
+  .pill {
+    @apply bg-red-200;
+  }
+}
+
+.success {
+  @apply border-green-200 bg-green-100;
+
+  .pill {
+    @apply bg-green-200;
+  }
+}
+
+.info {
+  @apply border-blue-200 bg-blue-100;
+
+  .pill {
+    @apply bg-blue-200;
+  }
+}
+
+.default {
+  @apply border-purple-200 bg-purple-100;
+
+  .pill {
+    @apply bg-purple-200;
+  }
+}
