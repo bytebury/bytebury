@@ -59,6 +59,7 @@ export default component$(() => {
         <div id="Navbar_hamburger" class="flex md:hidden">
           <button
             class="hamburger"
+            aria-label="Navigation Menu"
             onClick$={() => (isMobileNavOpen.value = true)}
           >
             <IcOutlineMenu style={{ width: "24px", height: "24px" }} />

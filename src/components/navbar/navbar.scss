@@ -1,5 +1,5 @@
 nav {
-  height: 45px;
+  height: 55px;
   @apply fixed left-0 top-0 flex w-full border-b bg-white py-2;
 }
 
@@ -19,13 +19,13 @@ ul.modal-nav {
   }
 
   li {
-    @apply hover:text-primary text-base font-medium text-gray-500;
+    @apply text-base font-medium text-gray-500 hover:text-primary;
     @apply w-full border-b transition-colors duration-300 ease-linear;
   }
 }
 
 a.contact {
-  @apply bg-primary rounded border border-black/20 px-3 py-1.5 text-sm text-white transition-colors duration-300 ease-linear;
+  @apply rounded border border-black/20 bg-primary px-3 py-1.5 text-sm text-white transition-colors duration-300 ease-linear;
 
   &:hover {
     @apply bg-primary-dark;

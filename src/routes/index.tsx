@@ -1,18 +1,13 @@
 import { component$ } from "@builder.io/qwik";
-import { routeLoader$, type DocumentHead } from "@builder.io/qwik-city";
+import { type DocumentHead } from "@builder.io/qwik-city";
 import Banner from "~/components/banner/banner";
 import Hero from "~/components/hero/hero";
 import { GITHUB_URL } from "~/constants/app-constants";
 import { IcBaselineFormatQuote } from "~/media/icons/quotes";
 
-export const useStoicQuote = routeLoader$(async () => {
-  const response = await fetch("https://stoic-quotes.com/api/quote");
-  return response.json();
-});
-
 export default component$(() => {
   return (
-    <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-8 pb-8">
       <Hero />
       <div class="flex flex-col gap-8">
         <div class="container">
@@ -22,9 +17,7 @@ export default component$(() => {
           </Banner>
         </div>
         <section class="container flex flex-col gap-4">
-          <h1 class="text-2xl sm:text-3xl">
-            Local Inspiration, Global Influence
-          </h1>
+          <h1 class="text-3xl">Local Inspiration, Global Influence</h1>
           <p>
             Based in the heart of Windsor, CT, we craft online solutions that
             resonate globally. From local enterprises to broader communities,
@@ -39,8 +32,8 @@ export default component$(() => {
           </p>
         </section>
         <section class="container flex flex-col gap-4">
-          <h1 class="text-2xl sm:text-3xl">
-            <span class="text-primary">♥</span> We Byte Back
+          <h1 class="text-3xl">
+            <span class="text-4xl text-primary">♥</span> We Byte Back
           </h1>
           <p>
             We "byte back" to open-source. We believe in the power of
@@ -65,11 +58,11 @@ export default component$(() => {
           <div class="container flex flex-col gap-8">
             <div>
               <div class="flex items-center justify-between">
-                <h1 class="text-2xl sm:text-3xl">Voices of Success</h1>
-                <IcBaselineFormatQuote class="text-primary h-10 w-10 md:h-14 md:w-14" />
+                <h1 class="text-3xl">Voices of Success</h1>
+                <IcBaselineFormatQuote class="h-12 w-12 text-primary md:h-14 md:w-14" />
               </div>
               <p>
-                we take immense pride in the success stories that our clients
+                We take immense pride in the success stories that our clients
                 graciously share. Here's what some of them have to say about
                 their experiences collaborating with us:
               </p>
@@ -104,6 +97,21 @@ export default component$(() => {
               </div>
             </div>
           </div>
+        </section>
+        <section class="container flex flex-col items-center gap-8 text-center">
+          <div class="flex flex-col gap-2">
+            <h1 class="text-3xl">Fill us in &mdash;</h1>
+            <p>
+              We'd love to hear from you! Let us know how we are doing,
+              especially if there's something we can improve on.
+            </p>
+          </div>
+          <a
+            href="mailto:hey@bytebury.com"
+            class="gradient-border cta mx-auto w-full md:w-96"
+          >
+            <div class="bg-white">Connect with us</div>
+          </a>
         </section>
       </div>
     </div>
