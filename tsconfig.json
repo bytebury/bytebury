@@ -1,26 +1,33 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "allowJs": true,
-    "target": "ES2017",
-    "module": "ES2022",
-    "lib": ["es2022", "DOM", "WebWorker", "DOM.Iterable"],
-    "jsx": "react-jsx",
-    "jsxImportSource": "@builder.io/qwik",
-    "strict": true,
+    "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "moduleResolution": "node",
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "incremental": true,
-    "isolatedModules": true,
-    "outDir": "tmp",
-    "noEmit": true,
-    "types": ["node", "vite/client"],
-    "paths": {
-      "~/*": ["./src/*"]
-    }
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "useDefineForClassFields": false,
+    "lib": [
+      "ES2022",
+      "dom"
+    ]
   },
-  "files": ["./.eslintrc.cjs"],
-  "include": ["src", "./*.d.ts", "./*.config.ts"]
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
 }
