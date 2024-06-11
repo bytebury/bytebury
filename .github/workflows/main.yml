@@ -10,24 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20.14.0'
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.14.0"
 
-    - name: Install and build
-      run: | 
-        npm install
-        npm run build
+      - name: Install and build
+        run: |
+          npm install
+          npm run build
 
-    - name: Create 404.html file
-      run: cp ./dist/bytebury/browser/index.html ./dist/bytebury/browser/404.html
+      - name: Create 404.html file
+        run: cp ./dist/bytebury/browser/index.html ./dist/bytebury/browser/404.html
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist/bytebury/browser
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/bytebury/browser
