@@ -1,0 +1,118 @@
+@import "colors";
+@import "bootstrap-icons/font/bootstrap-icons";
+
+html,
+body,
+app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: $black;
+  background: $white;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    Noto Sans,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    Segoe UI Symbol,
+    "Noto Color Emoji";
+  line-height: 1.4rem;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 50px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 976px;
+  box-sizing: border-box;
+}
+
+a {
+  color: $primary;
+}
+
+a,
+button {
+  transition: all 300ms ease;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  line-height: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  width: 100%;
+  background: hsl(180, 6%, 93%);
+  border-top: 1px solid hsl(180, 6%, 85%);
+  padding: 16px 0;
+  box-sizing: border-box;
+
+  ul {
+    li.copyright {
+      font-size: 0.8rem;
+      color: hsl(180, 6%, 40%);
+    }
+  }
+
+  .branding {
+    display: inline-flex;
+    gap: 6px;
+    font-weight: 900;
+    align-items: center;
+    color: hsl(180, 6%, 40%);
+    text-decoration: none;
+
+    &:hover {
+      color: hsl(180, 6%, 25%);
+    }
+  }
+}
+
+markdown {
+  pre {
+    width: 100%;
+    overflow: auto;
+    font-size: 0.85rem !important;
+    background: black;
+    padding: 16px;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+
+  code {
+    display: inline-block;
+    background: $gray-light;
+    color: $primary;
+    padding: 2px 8px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,7 @@
+<header [ngStyle]="{ background: backgroundUrl() }">
+  <ng-content select="h1" />
+  <p>
+    <ng-content />
+  </p>
+  <ng-content select="app-call-to-action-button" />
+</header>

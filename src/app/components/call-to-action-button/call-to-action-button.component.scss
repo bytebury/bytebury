@@ -1,0 +1,48 @@
+@import "colors";
+
+@keyframes wiggle {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: -10deg;
+  }
+  75% {
+    rotate: 10deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    background: $primary;
+  }
+  33% {
+    background: rgb(50, 156, 69);
+  }
+  66% {
+    background: rgb(248, 154, 54);
+  }
+  100% {
+    background: rgb(222, 92, 78);
+  }
+}
+
+:host {
+  a {
+    color: $white;
+    border-radius: 20px;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.4);
+    font-size: 1.25rem;
+    animation: changeColor 9s alternate infinite;
+  }
+
+  &:hover {
+    animation: wiggle 750ms ease;
+  }
+}

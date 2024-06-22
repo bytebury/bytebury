@@ -1,0 +1,100 @@
+@import "colors";
+@import "sizing";
+
+:host {
+  display: block;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 24px;
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 900;
+    line-height: 2.25rem;
+  }
+
+  section.meet-marcello {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    img {
+      width: 128px;
+      height: 128px;
+      border-radius: 100%;
+      padding: 16px;
+      border: 1px solid $gray-light;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 28px 0 48px 0;
+  background: hsl(206, 100%, 89%);
+  border-top: 1px dashed hsl(206, 100%, 70%);
+  border-bottom: 1px dashed hsl(206, 100%, 70%);
+  color: hsl(206, 100%, 15%);
+
+  h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: end;
+
+    .bi-quote {
+      font-size: 48px;
+    }
+  }
+
+  .testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+
+    @include device("tablet") {
+      grid-template-columns: 100%;
+    }
+  }
+}
+
+.connect-with-us {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 10px;
+
+    a {
+      color: lighten($black, 25%);
+
+      &:hover {
+        color: $primary;
+      }
+
+      i {
+        font-size: 32px;
+      }
+    }
+  }
+}

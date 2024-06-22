@@ -1,0 +1,30 @@
+@import "colors";
+@import "sizing";
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 300ms ease;
+  padding: 8px 0;
+  box-sizing: border-box;
+  background: $white;
+  z-index: 100;
+
+  a.branding {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 900;
+    text-decoration: none;
+    color: $black;
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 1.15rem;
+    margin-left: -12px;
+
+    &:hover {
+      background: $gray-light;
+    }
+  }
+}
